@@ -1,0 +1,7 @@
+{
+  "name": "ionicServ",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
