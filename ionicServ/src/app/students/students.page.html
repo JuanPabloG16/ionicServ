@@ -5,19 +5,17 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-searchbar placeholder="Bucador"></ion-searchbar>
+  <ion-searchbar placeholder="Buscador" ></ion-searchbar>
 
-  <ion-list >
-    <ion-item >
+  <ion-list>
+    <ion-item *ngFor="let person of people">
       <ion-avatar slot="start">
-        <img/>
+        <img />
       </ion-avatar>
       <ion-label>
-        <h2>XD</h2>
-        <p>años</p>
+        <h2>xd</h2>
+        <p>{{person.name}}</p>
       </ion-label>
     </ion-item>
   </ion-list>
-
-
 </ion-content>

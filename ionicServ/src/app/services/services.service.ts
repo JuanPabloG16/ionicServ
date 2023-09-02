@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { People } from '../models/people.model';
 import { Observable } from 'rxjs';
+import { ResponsePeople } from '../models/responsePeople.model';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,9 @@ import { Observable } from 'rxjs';
 export class ServicesService {
 
   constructor(private http:HttpClient) { }
-  getPeople(): Observable<People> { // Usa la interfaz Persona
-    return this.http.get<People>(environment.people);
+
+  //servicio estudents
+  getPeople(): Observable<ResponsePeople> { // Usa la interfaz Persona
+    return this.http.get<ResponsePeople>(environment.people);
   }
 }

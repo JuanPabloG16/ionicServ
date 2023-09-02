@@ -4,8 +4,11 @@
 
 export const environment = {
   production: false,
-  people:"http://localhost:3001/api/v1/getPersonas"
+  people:"http://localhost:3001/api/v1/getPersonas",
+  courses:"http://localhost:3001/api/v1/getCursos"
 };
+
+
 
 /*
  * For easier debugging in development mode, you can import the following file

@@ -18,13 +18,22 @@ export class StudentsPage implements OnInit {
 
 
   //declaracion variables
-    name : People| null=null;
-    edad : People| null=null;
-    course : People| null=null;
+  people: People[] = [];
 
   constructor(private peopleService : ServicesService) { }
 
   ngOnInit() {
+    this.ListStudents();
   }
+
+  // funcion listar Personas
+  ListStudents(){
+    this.peopleService.getPeople().subscribe({
+      next:(dat)=>{
+        this.people=dat.data;
+      }
+    });
+  }
+
 
 }
