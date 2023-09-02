@@ -1,5 +1,5 @@
 export interface People{
-    name : string;
+    nombre : string ; 
     edad : number;
-    course : string;
+    curso : string;
 }

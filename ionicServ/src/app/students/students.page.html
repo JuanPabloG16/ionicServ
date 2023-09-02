@@ -1,20 +1,25 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>students</ion-title>
+    <ion-title>Students</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-searchbar placeholder="Buscador" ></ion-searchbar>
+  <ion-searchbar
+    placeholder="Buscar"
+    [(ngModel)]="searchText"
+    (ionChange)="filterStudents()"
+  ></ion-searchbar>
 
   <ion-list>
     <ion-item *ngFor="let person of people">
       <ion-avatar slot="start">
-        <img />
+        <img/>
       </ion-avatar>
       <ion-label>
-        <h2>xd</h2>
-        <p>{{person.name}}</p>
+        <h2>{{ person.nombre }}</h2>
+        <p>{{ person.edad }} años</p>
+        <p>{{ person.curso }}</p>
       </ion-label>
     </ion-item>
   </ion-list>
