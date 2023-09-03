@@ -1,3 +1,4 @@
 export interface Course{
-    course : string;
+    cod:number;
+    nombre : string;
 }

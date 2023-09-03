@@ -10,16 +10,18 @@
     [(ngModel)]="searchText"
     (ionChange)="filterStudents()"
   ></ion-searchbar>
-
+  <ion-item>
+  <ion-button (click)="goPage('course')">Ir a Cursos</ion-button>
+  </ion-item>
   <ion-list>
-    <ion-item *ngFor="let person of people">
+    <ion-item *ngFor="let person of people" (click)="showCurso(person)">
       <ion-avatar slot="start">
-        <img/>
+        <img [src]="" />
       </ion-avatar>
       <ion-label>
         <h2>{{ person.nombre }}</h2>
         <p>{{ person.edad }} años</p>
-        <p>{{ person.curso }}</p>
+        <p *ngIf="selectedPerson === person">{{ person.curso }}</p>
       </ion-label>
     </ion-item>
   </ion-list>
