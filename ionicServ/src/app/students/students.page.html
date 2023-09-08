@@ -6,13 +6,15 @@
 
 <ion-content [fullscreen]="true">
   <ion-searchbar
-    placeholder="Buscar"
-    [(ngModel)]="searchText"
-    (ionChange)="filterStudents()"
+  placeholder="Buscar"
+  [(ngModel)]="searchText"
+  (ionInput)="filterStudents()"
   ></ion-searchbar>
+
   <ion-item>
-  <ion-button (click)="goPage('course')">Ir a Cursos</ion-button>
+    <ion-button (click)="goPage('course')">Ir a Cursos</ion-button>
   </ion-item>
+
   <ion-list>
     <ion-item *ngFor="let person of people" (click)="showCurso(person)">
       <ion-avatar slot="start">

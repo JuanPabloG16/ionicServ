@@ -40,9 +40,12 @@ export class CoursePage implements OnInit {
       });
   }
 
+
   goToHomePage() {
     // Navegar de regreso a la página principal
     this.router.navigate(['students']); 
   }
+
+  
 }
 

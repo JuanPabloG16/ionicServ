@@ -1,24 +1,20 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>Students</ion-title>
+    <ion-title>Courses</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-searchbar
-    placeholder="Buscar"
-
+    placeholder="Search"
   ></ion-searchbar>
-  <ion-item>
-  <ion-button (click)="goToHomePage()">Ir a Estudiantes</ion-button>
-  </ion-item>
+
   <ion-list>
     <ion-item *ngFor="let course of cours">
       <ion-label>
-        <h2>Curso</h2>
-        <p>{{course.nombre}}</p>
+        <h2>Course</h2>
+        <p>{{ course.nombre }}</p>
       </ion-label>
     </ion-item>
   </ion-list>
-
 </ion-content>

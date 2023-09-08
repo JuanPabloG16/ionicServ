@@ -61,9 +61,16 @@ goPage(pag: string):void {
       this.ListStudents();
       return;
     }
+    const searchTextEnMinusculas = this.searchText.toLowerCase();
 
-    this.people = this.people.filter((person) =>
-      person.nombre.toLowerCase().includes(this.searchText.toLowerCase())
-    );
+    this.people = this.people.filter((person) => {
+      const nombreEnMinusculas = person.nombre.toLowerCase();
+      const cursoEnMinusculas = person.curso.toLowerCase();
+  
+      // Verifica si el campo de búsqueda coincide con el nombre o el curso
+      return nombreEnMinusculas.includes(searchTextEnMinusculas) ||
+        cursoEnMinusculas.includes(searchTextEnMinusculas);
+    });
+
   }
 }
