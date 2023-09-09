@@ -5,16 +5,16 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-searchbar
-    placeholder="Search"
-  ></ion-searchbar>
-
+  <ion-item>
+    <ion-button (click)="goToHomePage()">Estudiantes</ion-button>
+  </ion-item>
   <ion-list>
-    <ion-item *ngFor="let course of cours">
+    <ion-item *ngFor="let course of cours" (click)="showPeople(course.nombre)">
       <ion-label>
         <h2>Course</h2>
-        <p>{{ course.nombre }}</p>
+         <p>{{ course.nombre }}</p>
       </ion-label>
     </ion-item>
   </ion-list>
+
 </ion-content>

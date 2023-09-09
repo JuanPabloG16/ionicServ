@@ -17,5 +17,9 @@ export const routes: Routes = [
   {
     path: 'course',
     loadComponent: () => import('./course/course.page').then( m => m.CoursePage)
+  },  {
+    path: 'modal-show-people',
+    loadComponent: () => import('./modal-show-people/modal-show-people.page').then( m => m.ModalShowPeoplePage)
   },
+
 ];
